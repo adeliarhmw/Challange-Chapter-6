@@ -1,0 +1,288 @@
+{
+  "info": {
+    "_postman_id": "dc152f2c-2a06-428f-8fb4-f9dbd729aa8e",
+    "name": "db_games_ch3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "get user_game",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/get-user-game",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["get-user-game"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user_gamebyid",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/get-user-gamebyid/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["get-user-gamebyid", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create user_game",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"adelia\",\r\n    \"password\": \"adele17\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/create-user-game",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["create-user-game"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update user_game",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\" : \"Adeliarahma\"\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/update-user-game/2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["update-user-game", "2"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete user_game",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/delete-user-game/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["delete-user-game", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get user_game_biodata",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/get-user-game-biodata",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["get-user-game-biodata"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get user_game_biodatabyid",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/get-user-game-biodatabyid/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["get-user-game-biodatabyid", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create user_game_biodata",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_user\": 1,\r\n    \"name_user\" : \"kelviansy\",\r\n    \"email\" : \"kelviansyabin@gmail.com\",\r\n    \"gender\" : \"laki laki\"\r\n}\r\n\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/create-user-games-biodata",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["create-user-games-biodata"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update user_game_biodata",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name_user\" : \"kelvinsyhb\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/update-user-game-biodata/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["update-user-game-biodata", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete user_game_biodata",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/delete-user-game-biodata/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["delete-user-game-biodata", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get user_game_history",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/get-user-game-history",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["get-user-game-history"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get user_game_historybyid",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/get-user-game-historybyid/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["get-user-game-historybyid", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create user_game_history",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_user\" :1,\r\n    \"game_tittle\" : \"candy crush\",\r\n    \"score\" : 2357496,\r\n    \"level\" : 121\r\n    \r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/create-user-game-history",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["create-user-game-history"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update user_game_history",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"score\" : 436212\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/update-user-game-history/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["update-user-game-history", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete user_game_history",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/delete-user-game-history/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["delete-user-game-history", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
