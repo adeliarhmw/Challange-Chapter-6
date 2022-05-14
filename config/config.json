@@ -7,17 +7,25 @@
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
+    "username": "postgres",
+    "password": "adelia",
+    "database": "db_games_ch3",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "url": "postgres://biujtqikbehvis:f11875db589863716a8a05489a97633348a8aef569d7f2b430548710623d5a3e@ec2-44-196-223-128.compute-1.amazonaws.com:5432/d3ttfiv65q7iaf",
+    "username": "biujtqikbehvis",
+    "password": "f11875db589863716a8a05489a97633348a8aef569d7f2b430548710623d5a3e",
+    "database": "d3ttfiv65q7iaf",
+    "host": "ec2-44-196-223-128.compute-1.amazonaws.com",
+    "port": "5432",
+    "dialect": "posgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }

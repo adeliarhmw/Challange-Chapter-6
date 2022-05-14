@@ -28,6 +28,15 @@ const {
 } = require("../controller/user_game_biodata_api");
 
 const {
+  getuser_game_biodata_views,
+  getuser_game_biodatabyid_views,
+  createuser_game_biodata_form_views,
+  createuser_game_biodata_views,
+  update_user_game_biodata_views,
+  deleteuser_game_biodata_views,
+} = require("../controller/user_game_biodata_views");
+
+const {
   getuser_game_history_api,
   getuser_game_historybyid_api,
   createuser_game_history_api,
@@ -35,10 +44,20 @@ const {
   deleteuser_game_history_api,
 } = require("../controller/user_game_history_api");
 
+const {
+  getuser_game_history_views,
+  getuser_game_historybyid_views,
+  createuser_game_history_form_views,
+  createuser_game_history_views,
+  update_user_game_history_views,
+  deleteuser_game_history_views,
+} = require("../controller/user_game_history_views");
+
 const { register, login } = require("../controller/auth_api");
 const { registerPage, registerViews } = require("../controller/auth_views");
 
 const user_game_views = require("../controller/user_game_views");
+const { errorPage } = require("../controller/error");
 
 // user_game Endpoint
 router.get("/api/get-user-game", auth, getuser_game_api);
@@ -133,6 +152,71 @@ router.get(
   checkAuthenticated,
   deleteuser_game_views
 );
+
+// User game Biodata view
+router.get(
+  "/view/usergamesbiodata",
+  checkAuthenticated,
+  getuser_game_biodata_views
+);
+router.get(
+  "/view/createuser_game_biodata",
+  checkAuthenticated,
+  createuser_game_biodata_form_views
+);
+router.get(
+  "/view/updateformuserbiodata/:id",
+  checkAuthenticated,
+  getuser_game_biodatabyid_views
+);
+router.post(
+  "/view/createuser_game_biodata_views",
+  checkAuthenticated,
+  createuser_game_biodata_views
+);
+router.post(
+  "/view/updateformuserbiodata/:id",
+  checkAuthenticated,
+  update_user_game_biodata_views
+);
+router.get(
+  "/view/deleteusergamebiodata/:id",
+  checkAuthenticated,
+  deleteuser_game_biodata_views
+);
+
+//user game history view
+router.get(
+  "/view/usergameshistory",
+  checkAuthenticated,
+  getuser_game_history_views
+);
+router.get(
+  "/view/createuser_game_history",
+  checkAuthenticated,
+  createuser_game_history_form_views
+);
+router.get(
+  "/view/updateformuserhistory/:id",
+  checkAuthenticated,
+  getuser_game_historybyid_views
+);
+router.post(
+  "/view/createuser_game_history_views",
+  checkAuthenticated,
+  createuser_game_history_views
+);
+router.post(
+  "/view/updateformuserhistory/:id",
+  checkAuthenticated,
+  update_user_game_history_views
+);
+router.get(
+  "/view/deleteusergamehistory/:id",
+  checkAuthenticated,
+  deleteuser_game_history_views
+);
+router.get("/view/error", errorPage);
 
 router.get("/view/register", checkNotAuthenticated, registerPage);
 router.post("/register", checkNotAuthenticated, registerViews);

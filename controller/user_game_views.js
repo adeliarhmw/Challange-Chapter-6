@@ -17,16 +17,10 @@ module.exports = {
       .then((result) => {
         if (result.length > 0) {
           // res.status(200).json({ message: 'Berhasil Get All User Game', result });
-          res.render("usergames/index", {
-            usergames: result,
-            moment,
-          });
+          res.render("usergames/index", { usergames: result, moment });
         } else {
           // res.status(404).json({ message: 'User Game Tidak di temukan', result });
-          res.render("usergames/index", {
-            usergames: result,
-            moment,
-          });
+          res.render("usergames/index", { usergames: result, moment });
         }
       })
       .catch((err) => {

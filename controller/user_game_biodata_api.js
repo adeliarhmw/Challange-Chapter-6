@@ -119,7 +119,7 @@ module.exports = {
         },
       })
       .then((result) => {
-        if (result[0] === 0) {
+        if (result === 0) {
           res.status(404).json({
             message:
               "User Game Biodata dengan ID " + req.params.id + " Not Found",

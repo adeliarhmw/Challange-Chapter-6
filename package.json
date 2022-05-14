@@ -1,10 +1,10 @@
 {
-  "name": "chapt4",
+  "name": "chapter6",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --detectOpenHandles --runInBand --verbose "
   },
   "keywords": [],
   "author": "",
@@ -17,12 +17,14 @@
     "express": "^4.17.3",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.2",
+    "jest": "^28.1.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.3",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
     "pg": "^8.7.3",
     "sequelize": "^6.18.0",
+    "supertest": "^6.2.3",
     "swagger-ui-express": "^4.3.0"
   }
 }
